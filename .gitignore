@@ -14,7 +14,7 @@ pip-wheel-metadata/
 *.tfstate
 *.tfstate.*
 crash.log
-terraform.tfvars            # keep secrets out of git
+infra/terraform.tfvars            # keep secrets out of git
 *.backup
 
 # ── AWS & local credentials ──────────────────────────────────────────
