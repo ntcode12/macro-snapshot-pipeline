@@ -1,0 +1,61 @@
+# ── Python ───────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+env/
+venv/
+# virtualenv tools
+pip-wheel-metadata/
+*.egg-info/
+
+# ── Terraform ────────────────────────────────────────────────────────
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+terraform.tfvars            # keep secrets out of git
+*.backup
+
+# ── AWS & local credentials ──────────────────────────────────────────
+.aws/
+.env
+*.pem
+*.key
+*.crt
+
+# ── Airflow / Docker runtime ────────────────────────────────────────
+logs/
+airflow/logs/
+airflow/tmp/
+docker-compose.override.yaml
+
+# ── Great Expectations artifacts ─────────────────────────────────────
+ge/uncommitted/
+# (holds validation results & checkpoints)
+
+# ── Spark / Parquet outputs ──────────────────────────────────────────
+*.parquet
+*.orc
+*.snappy
+spark-warehouse/
+metastore_db/
+
+# ── Flink / Trino temporary files ────────────────────────────────────
+flink-*/log/
+flink-*/tmp/
+trino-*/var/
+
+# ── Jupyter & editors ────────────────────────────────────────────────
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# ── OS cruft ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Build artifacts ─────────────────────────────────────────────────
+pull.zip                      # packaged Lambda
+dist/
+build/
